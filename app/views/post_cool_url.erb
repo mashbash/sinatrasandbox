@@ -1,0 +1,53 @@
+<style type="text/css">
+  .container {
+    margin: 20px auto;
+    width: 600px;
+    padding: 0px 20px 20px 20px;
+    border: 1px dotted black;
+  }
+  th {
+    text-align: left;
+  }
+</style>
+
+<div class="container">
+
+<p> this is the post_cool_url page</p>
+
+<% if params[:email] %>
+<p>This is the email you submitted:</p>
+<%= params[:email] %>
+<% end %> 
+
+<% if params[:text] %>
+<p>This is the garble you typed:</p>
+<%= params[:text] %>
+<% end %> 
+
+<% if params[:texttest] %>
+<p>This is the extra garble you typed:</p>
+<%= params[:texttest] %>
+<% end %> 
+
+<% if params[:post][:description] %>
+<p>This is the test on textarea new form names:</p>
+<%= params[:post][:description] %>
+<% end %> 
+
+
+<% if params[:food] %>
+<p>This is the food item you selected:</p>
+<%= params[:food] %>
+<% end %>
+
+
+
+<% if params.keys.any? { |key| key.match (/item.*/) } %>
+<p> These are the stuff you've done on your to do list:</p>
+  <% params.each_value do |v| %>
+  <p><%= v %> </p>
+  <% end %>
+<% end %>
+
+</div>
+

@@ -1,0 +1,18 @@
+- When I want to be able to submit / post something, do I need to put it inside a forms tag?
+answer: yes because we need to use the input submit tag
+
+- When I put the textarea tag inside a form tag, which name attribute gets read when I submit it?
+answer: the textarea name, made 2 textareas to prove this point
+
+- If I have multiple input fields in varying formats on my page, when the values gets passed, which 
+  params are picked up on the view (.erb) page?
+answer: all params get picked up unless you are specific about which key you are referring to, so if you
+want values from a certain input field to show up, you have to set the specific conditions for it
+
+- How do I hide the value from appearing in the URL when I use the gets method?
+answer: I believe you can simply refer to something else of that user, i.e. userid instead of name etc.
+
+When I add new form element names to my textarea form:
+It throws up and error because naming it post[description] makes it a nested hash and it won't
+be able to read the value. If I had to use that same naming syntax, then I would have to put
+params[:post][:description] to make it work but it is convoluted to do it that way. 
